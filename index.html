@@ -4,10 +4,24 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <title>Spoon-Knife</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
   <LINK href="styles.css" rel="stylesheet" type="text/css">
 </head>
 
-<body>
+
+<body ng-app="myModule">
+
+<script>
+	var myApp = angular.module("myModule", [])
+						.controller("myController", function($scope){
+						
+						
+						});
+
+</script>
+
+<div ng-controller="myController">
+
 
 <img src="piggy.jpg" id="octocat" alt="" />
 
@@ -15,6 +29,11 @@
 <p>
   I like apples.
 </p>
+
+<input type="text" ng-model="word" placeholder="Type something here.."></input>
+<p>{{word}}</p>
+
+</div>
 
 </body>
 </html>
